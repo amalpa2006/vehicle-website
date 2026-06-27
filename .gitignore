@@ -1,0 +1,2 @@
+# Ignore the nested git repo (car-selling-website has its own .git)
+vehicle_website_frontend/car-selling-website/
