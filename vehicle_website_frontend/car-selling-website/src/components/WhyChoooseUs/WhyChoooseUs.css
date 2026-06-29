@@ -1,0 +1,59 @@
+/* Why Choose Us styling */
+
+.why-us {
+  padding: 48px 24px;
+  color: #ffffff;
+}
+
+.why-us h2 {
+  margin: 0 0 18px;
+  text-align: center;
+
+  font-size: 34px;
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.features {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+.features > div {
+  background: rgba(20, 20, 20, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+
+  padding: 16px 18px;
+
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.4;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 600px) {
+  .why-us {
+    padding: 32px 14px;
+  }
+
+  .why-us h2 {
+    font-size: 26px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .features > div {
+    padding: 14px 14px;
+  }
+}

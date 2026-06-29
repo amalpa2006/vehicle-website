@@ -1,0 +1,157 @@
+/* Hero Section styling */
+
+.hero {
+  width: 100%;
+  padding: 70px 24px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+.hero-content {
+  width: 100%;
+  max-width: 980px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  align-items: flex-start;
+  text-align: left;
+
+  color: #ffffff;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: 56px;
+  font-weight: 950;
+  letter-spacing: -1.5px;
+
+  line-height: 1.05;
+}
+
+.hero-content p {
+  margin: 0;
+
+  font-size: 18px;
+  line-height: 1.6;
+
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 620px;
+}
+
+/* Search */
+.search-box {
+  margin: 10px auto 0;
+
+  width: 100%;
+  max-width: 480px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+
+  height: 40px;
+  padding: 0 12px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+
+  outline: none;
+}
+
+.search-box input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-box input:focus {
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 0 4px rgba(170, 59, 255, 0.12);
+}
+
+.search-box button {
+  height: 40px;
+  padding: 0 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  background: linear-gradient(135deg, #6b3f2a, #9a5a3a);
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 850;
+
+  cursor: pointer;
+
+  transition: transform 160ms ease, filter 160ms ease;
+}
+
+.search-box button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.search-box button:active {
+  transform: translateY(0px);
+}
+
+.search-box button:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.35);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    padding: 54px 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 40px;
+  }
+
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .search-box {
+    max-width: 520px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 {
+    font-size: 30px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+}

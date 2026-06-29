@@ -1,0 +1,339 @@
+/* Admin Dashboard Styling */
+
+.admin-page {
+  min-height: calc(100vh - 80px);
+  padding: 40px 24px 60px;
+  color: #ffffff;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-title {
+  font-size: 36px;
+  font-weight: 900;
+  margin: 0 0 28px;
+  letter-spacing: -0.5px;
+  text-align: left;
+}
+
+/* Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 0;
+}
+
+.tab-btn {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.6);
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 180ms ease;
+  border-radius: 10px 10px 0 0;
+}
+
+.tab-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tab-btn.active {
+  color: #ffffff;
+  border-bottom-color: #9a5a3a;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+/* Messages */
+.admin-message {
+  padding: 14px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: left;
+  animation: fadeIn 200ms ease;
+}
+
+.admin-message.success {
+  background: rgba(34, 197, 94, 0.18);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: #86efac;
+}
+
+.admin-message.error {
+  background: rgba(239, 68, 68, 0.18);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #fca5a5;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Loading */
+.admin-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 0;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 4px solid rgba(255, 255, 255, 0.12);
+  border-top-color: #9a5a3a;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Section */
+.admin-section {
+  background: rgba(20, 20, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.record-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.admin-table thead {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.admin-table th {
+  padding: 12px 16px;
+  text-align: left;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.55);
+  white-space: nowrap;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.admin-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.9);
+  vertical-align: middle;
+}
+
+.admin-table tbody tr {
+  transition: background 140ms ease;
+}
+
+.admin-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.cell-id {
+  font-family: monospace;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.cell-name {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.cell-price {
+  font-weight: 700;
+  color: #86efac;
+}
+
+.cell-date {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.admin-badge {
+  background: rgba(154, 90, 58, 0.25);
+  color: #d4a574;
+  border: 1px solid rgba(154, 90, 58, 0.35);
+}
+
+.user-badge {
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Action buttons */
+.cell-actions {
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.action-btn {
+  cursor: pointer;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 140ms ease;
+}
+
+.action-btn.promote {
+  background: rgba(34, 197, 94, 0.15);
+  color: #86efac;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+}
+
+.action-btn.promote:hover {
+  background: rgba(34, 197, 94, 0.25);
+  transform: translateY(-1px);
+}
+
+.action-btn.demote {
+  background: rgba(234, 179, 8, 0.15);
+  color: #fde047;
+  border: 1px solid rgba(234, 179, 8, 0.25);
+}
+
+.action-btn.demote:hover {
+  background: rgba(234, 179, 8, 0.25);
+  transform: translateY(-1px);
+}
+
+.action-btn.delete {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+}
+
+.action-btn.delete:hover {
+  background: rgba(239, 68, 68, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Empty state */
+.empty-state {
+  padding: 48px 22px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .admin-page {
+    padding: 28px 16px 40px;
+  }
+
+  .admin-title {
+    font-size: 28px;
+  }
+
+  .tab-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .admin-table {
+    font-size: 13px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .admin-title {
+    font-size: 24px;
+  }
+
+  .admin-tabs {
+    gap: 4px;
+  }
+
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cell-actions {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
